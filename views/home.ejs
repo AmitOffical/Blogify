@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+        <title>Blogify</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+
+
+        <div class="container mt-5">
+            <div class="row">
+            <% blogs.forEach(blog=> { %>
+                <div class="col-lg-4">
+                
+                    <div class="card mt-2" style="width: 18rem;">
+                        <img src="<%= blog.coverImage %>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= blog.title %></h5>
+                            <a href="/blog/<%= blog._id %>" class="btn btn-primary">Visit</a>
+                        </div>
+                    </div>
+
+                </div>
+                <% }) %>
+            </div>
+        </div>
+        <!-- <%= JSON.stringify(blogs) %> -->
+            <%- include('./partials/script') %>
+</body>
+
+</html>

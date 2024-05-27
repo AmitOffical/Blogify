@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+        <title>SignUp || Blogify</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+      
+        <div class="container my-3">
+            <h1>Hey Welcome to the Blogify</h1>
+            <hr>
+            <div class="row">
+           <div class="signupForm mt-5 p-5 col-lg-6">
+            <h3>To Create a Blog - Register First</h3>
+            <form action="/user/signup" method="post" class="mt-4">
+                <div class="mb-3">
+                    <label for="fullname" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+            
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+           </div>
+           <div class="signupForm mt-5 col-lg-6">
+            <img src="/image/fornt.gif" class="img-fluid mt-5  mx-auto d-block" alt="...">
+           </div>
+        </div>
+       </div>
+        <%- include('./partials/script') %>
+</body>
+
+</html>
